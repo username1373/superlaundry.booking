@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Laundry Booking App</title>
+  <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="title">Super Laundry Booking</h1>
+      <p class="subtitle">Convenient, Reliable, and Affordable Laundry Services</p>
+      <p class="service-areas">We are currently serving the following areas in Christchurch: Aidenfield, Avonhead, Bryndwr, Fendalton, Halswell, Hillmorton, Hornby, Ilam, Upper Riccarton, Riccarton, Westmorland, Wigram, and Spreydon.</p>
+    </div>
+
+    <!-- Pricing Section -->
+    <div class="pricing">
+      <h2 class="section-title">Pricing</h2>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Load Size</th>
+            <th>Wash & Dry</th>
+            <th>Wash, Dry & Fold</th>
+            <th>Drying Only</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7Kg</td>
+            <td>$28</td>
+            <td>$35</td>
+            <td>$20 + $7 (fold)</td>
+          </tr>
+          <tr>
+            <td>10Kg</td>
+            <td>$40</td>
+            <td>$50</td>
+            <td>$25 + $10 (fold)</td>
+          </tr>
+          <tr>
+            <td>14Kg</td>
+            <td>$50</td>
+            <td>$65</td>
+            <td>$30 + $15 (fold)</td>
+          </tr>
+          <tr>
+            <td>18Kg</td>
+            <td>$65</td>
+            <td>$85</td>
+            <td>$35 + $20 (fold)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Booking Form -->
+    <form id="booking-form" action="https://formspree.io/f/xzzdgwyo" method="POST">
+      <div class="form-group">
+        <label for="option">Choose Pickup/Delivery Option:</label>
+        <select id="option" name="option" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="Option 1">Thu: 3pm-7pm → Fri: 3pm-7pm</option>
+          <option value="Option 2">Fri: 3pm-7pm → Sat: 3pm-7pm</option>
+          <option value="Option 3">Sat: 8am-12pm → Sun: 8am-12pm</option>
+          <option value="Option 4">Express Delivery (+$10): Weekdays 4pm-7pm, Weekends 9am-5pm</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="load">Select Load Size:</label>
+        <select id="load" name="load" required>
+          <option value="" disabled selected>Select load size</option>
+          <option value="7Kg">7Kg</option>
+          <option value="10Kg">10Kg</option>
+          <option value="14Kg">14Kg</option>
+          <option value="18Kg">18Kg</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="service">Select Service:</label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Select service</option>
+          <option value="Wash & Dry">Wash & Dry</option>
+          <option value="Wash, Dry & Fold">Wash, Dry & Fold</option>
+          <option value="Drying Only">Drying Only</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address" required />
+      </div>
+
+      <div class="form-group">
+        <label for="instructions">Any Instructions?</label>
+        <textarea id="instructions" name="instructions" placeholder="Add special instructions (e.g., 'Please call on arrival')" rows="4"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="payment">Select Payment Method:</label>
+        <select id="payment" name="payment" required>
+          <option value="" disabled selected>Select payment method</option>
+          <option value="Cash">Cash on pick-up/delivery (must be home)</option>
+          <option value="Card">By card on pick-up/delivery</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-button">Confirm Booking</button>
+    </form>
+  </div>
+
+  <!-- Link to the JS file -->
+  <script src="script.js"></script>
+</body>
+</html>
